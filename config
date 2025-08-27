@@ -15,6 +15,7 @@ hide_edge_borders none
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
+bindsym $mod+p border pixel 3
 bindsym $mod+n border normal
 
 #font xft:URWGothic-Book 11
