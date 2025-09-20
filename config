@@ -1,3 +1,6 @@
+
+exec --no-startup-id "/home/sydx/Custom/Scripts/ProxyPreSet"
+
 # Custom
 ## Basic Settings
     #dunst for notify-send
@@ -5,7 +8,10 @@ exec --no-startup-id dunst
 exec --no-startup-id "echo 'Xft.dpi:144' | xrdb -merge"
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id picom
-exec --no-startup-id "$HOME/.config/polybar/shades/launch.sh --shades && $HOME/.config/polybar/shades/scripts/pywal.sh $HOME/Pictures/wallhaven-ly3gjl.png" 
+
+exec --no-startup-id "$HOME/.config/polybar/shades/launch.sh --shades
+###&& $HOME/.config/polybar/shades/scripts/pywal.sh ~/Pictures/WallPapers/wallhaven-xe82x3.jpg"
+
 exec --no-startup-id fcitx5
 ## App Launcher
 bindsym Ctrl+Shift+A exec "flameshot gui"
@@ -14,8 +20,12 @@ bindsym $mod+Return exec kitty --listen-on unix:/tmp/kitty_pywal
 bindsym $mod+z exec firefox
 bindsym $mod+semicolon exec "flatpak run io.missioncenter.MissionCenter"
 bindsym $mod+backslash exec thunar
+## Bindsym Actions
+bindsym $mod+c move position center
 ## Global Firmware Settings
 bindsym $mod+x exec "$HOME/Custom/Scripts/TouchpadSwitch"
+
+
 
 # Origin
 set $mod Mod4
@@ -148,6 +158,11 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open specific applications in floating mode
+for_window [title="图片查看器"] floating enable
+for_window [title="QQ"] floating enable
+for_window [title="微信"] floating enable
+for_window [title="Volume Control"] floating enable
+for_window [title="sxiv"] floating enable border none
 for_window [title="Shutter"] floating enable border normal
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Calamares"] floating enable border normal
